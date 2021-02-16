@@ -20,7 +20,6 @@ print(price_txt)
 # сортировки остался тот же).
 
 price_list.sort()
-price_list.reverse()
 price_txt_ascending = ''
 for idx, price in enumerate(price_list):
     rub = int(price)
@@ -37,12 +36,13 @@ if id_before == id_after:
 # - Создать новый список, содержащий те же цены, но отсортированные по убыванию.
 
 price_list_descending = sorted(price_list)
+price_list_descending.reverse()
 print(price_list_descending)
 
 # - Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
-# price_list[4::-1] в 45 строке можно заменить на price_list_descending[-5::1]
+# price_list[-5::1] в 45 строке можно заменить на price_list_descending[4::-1]
 price_txt_highest_five = ''
-for idx, price in enumerate(price_list[4::-1]):
+for idx, price in enumerate(price_list[-5::1]):
     rub = int(price)
     kop = int(100 * round((price - rub), 2))
     if idx != 4:
