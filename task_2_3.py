@@ -7,8 +7,7 @@
 employers = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор '
                                                                                                         'аэлита']
 for idx, el in enumerate(employers):
-    el = el.title()
     temp_list = el.split(" ")
-    print(f'Привет, {temp_list[-1]}!')
+    print(f'Привет, {temp_list[-1].title()}!')
 # Не только не создаем новый список, но и старый не тронули
 print(employers)

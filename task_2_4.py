@@ -35,8 +35,7 @@ if id_before == id_after:
 
 # - Создать новый список, содержащий те же цены, но отсортированные по убыванию.
 
-price_list_descending = sorted(price_list)
-price_list_descending.reverse()
+price_list_descending = sorted(price_list, reverse=True)
 print(price_list_descending)
 
 # - Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?

@@ -19,10 +19,10 @@
 txt_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 digit_list = []
 for idx, el in enumerate(txt_list):
-    if el.isdigit() is True:
+    if el.isdigit():
         txt_list[idx] = f'"{int(el):02d}"'
         digit_list.append(txt_list[idx])
-    elif el[0] == '+' and el[1].isdigit() is True:
+    elif el[0] == '+' and el[1].isdigit():
         txt_list[idx] = f'"+{int(el):02d}"'
 text = ' '.join(txt_list)
 print(txt_list)
